@@ -1,16 +1,23 @@
 :root {
-    --background-primary: #222222;
-    --background-secondary: #111111;
-    --background-tertiary: #000;
+    --background-primary: rgba(51, 51, 51, 1);
+    --background-secondary: rgba(34, 34, 34, 1);
+    --background-tertiary: rgb(32, 32, 32);
+    --background-secondary-alt: rgba(51, 51, 51, 1);
     --background-modifier-accent: rgba(255,0,0, 0.1);
     --divider-color: rgba(255,0,0,0.6);
     --brand-experiment: rgba(255,0,0,0.6);
+    --channeltextarea-background: rgba(68, 68, 68, 1);
 }
+/* body {
+    background: url("https://cdn.discordapp.com/attachments/467688938681794560/881320277433262101/A_Fool_Moon_Night.jpg");
+    background-size: cover;
+    background-position: center;
+} */
 .panels-j1Uci_ {
-    background: #111111;
+    background-color: var(--background-secondary);
 }
-.wrapper-3NnKdC {
-    overflow: visible;
+.sidebar-2K8pFh {
+    z-index: 2;
 }
 .container-3w7J-x {
     transform: translateX(1.5px);
@@ -29,6 +36,20 @@
     background-color: var(--background-modifier-accent);
     margin: 0 10px;
 }
+.wrapper-3NnKdC {
+    overflow: visible;
+    position: relative;
+    z-index: 3;
+}
+.selected-aXhQR6 {
+    border-left: solid 2px rgba(255,0,0,0.6) !important;
+}
+.container-1D34oG {
+    background: var(--background-secondary);
+}
+.expandedFolderBackground-1cujaW {
+    background-color: var(--background-secondary-alt);
+}
 .wrapper-3NnKdC::after {
     content: "";
     width: 100%;
@@ -37,11 +58,10 @@
     left: 0;
     z-index: -1;
     transform: translateX(1.5px);
-    background: linear-gradient(to bottom, black, rgba(255,0,0,0.5) 50%, rgba(255,0,0,0.5) 55%, black 100%);
-    
+    background: linear-gradient(to bottom, var(--background-secondary), rgba(255,0,0,0.5) 50%, rgba(255,0,0,0.5) 55%, var(--background-secondary) 100%);
 }
 .wrapper-3NnKdC:hover::after {
-    background: linear-gradient(to bottom, black, rgba(255,0,0,0.5) 25%, rgba(255,0,0,0.5) 75%, black 100%);
+    background: linear-gradient(to bottom, var(--background-secondary), rgba(255,0,0,0.5) 25%, rgba(255,0,0,0.5) 75%, var(--background-secondary) 100%);
 }
 .unreadPillCapStroke-7rkHbg, .isUnread-3Ef-o9, .colorable-1bkp8v.red-33-Lnk, .live-vBWnV6, .mediaBarGrabber-1FqnbN {
     background: rgba(255,0,0,0.6) !important;
@@ -53,9 +73,9 @@
     background: linear-gradient(to left, #222222, rgba(255,0,0,0.6), red, #222222, #222222);
     background-size: 1200% 1200%;
     
-    -webkit-animation: SelectAnim 2s ease-in-out forwards;
-    -moz-animation: SelectAnim 2s ease-in-out forwards;
-    animation: SelectAnim 2s ease-in-out forwards;
+    -webkit-animation: SelectAnim 1s ease-in-out forwards;
+    -moz-animation: SelectAnim 1s ease-in-out forwards;
+    animation: SelectAnim 1s ease-in-out forwards;
     }
     @-webkit-keyframes SelectAnim {
         0%{background-position:0% 50%}
