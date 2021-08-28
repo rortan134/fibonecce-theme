@@ -1,0 +1,148 @@
+:root {
+    --background-primary: #222222;
+    --background-secondary: #111111;
+    --background-tertiary: #000;
+    --background-modifier-accent: rgba(255,0,0, 0.1);
+    --divider-color: rgba(255,0,0,0.6);
+    --brand-experiment: rgba(255,0,0,0.6);
+}
+.panels-j1Uci_ {
+    background: #111111;
+}
+.wrapper-3NnKdC {
+    overflow: visible;
+}
+.container-3w7J-x {
+    transform: translateX(1.5px);
+}
+.membersGroup-v9BXpm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+.membersGroup-v9BXpm::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--background-modifier-accent);
+    margin: 0 10px;
+}
+.wrapper-3NnKdC::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    transform: translateX(1.5px);
+    background: linear-gradient(to bottom, black, rgba(255,0,0,0.5) 50%, rgba(255,0,0,0.5) 55%, black 100%);
+    
+}
+.wrapper-3NnKdC:hover::after {
+    background: linear-gradient(to bottom, black, rgba(255,0,0,0.5) 25%, rgba(255,0,0,0.5) 75%, black 100%);
+}
+.unreadPillCapStroke-7rkHbg, .isUnread-3Ef-o9, .colorable-1bkp8v.red-33-Lnk, .live-vBWnV6, .mediaBarGrabber-1FqnbN {
+    background: rgba(255,0,0,0.6) !important;
+    box-shadow: 0 0 10px rgba(255,0,0,0.2);
+}
+.selected-3LIHYU .content-1x5b-n {
+    border-left: solid 2px rgba(255,0,0,0.6) !important;
+    padding-left: 10px;
+    background: linear-gradient(to left, #222222, rgba(255,0,0,0.6), red, #222222, #222222);
+    background-size: 1200% 1200%;
+    
+    -webkit-animation: SelectAnim 2s ease-in-out forwards;
+    -moz-animation: SelectAnim 2s ease-in-out forwards;
+    animation: SelectAnim 2s ease-in-out forwards;
+    }
+    @-webkit-keyframes SelectAnim {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes SelectAnim {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes SelectAnim {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+.numberBadge-2s8kKX {
+    width: 20px;
+    background: rgba(255,0,0,0.6) !important;
+    box-shadow: 0 0 10px rgba(255,0,0,0.6);
+}
+.mention-1f5kbO {
+    background: rgba(255,0,0,0.6) !important;
+    box-shadow: 0 0 10px rgba(255,0,0,0.2);
+}
+
+
+.homeIcon-FuNwkv {
+    overflow: hidden;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    
+    background: url(https://cdn.discordapp.com/attachments/381873284188340224/880979513050288218/phiboLogo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 999;
+    transition: background-position .5s ease-in-out;
+}
+.wrapper-1BJsBx:hover .homeIcon-FuNwkv, .selected-bZ3Lue .homeIcon-FuNwkv, .homeIcon-FuNwkv:hover{
+    background-position: left 0px bottom 500px ;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.homeIcon-FuNwkv:hover path, .selected-bZ3Lue .homeIcon-FuNwkv path  {
+    transform: translateY(0px);
+}
+.homeIcon-FuNwkv path {
+    width: 50%;
+    height: auto;
+    transform: translateY(500px);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+#private-channels-0 .linkButtonIcon-Mlm5d6 {
+    background: url(https://cdn.discordapp.com/attachments/381873284188340224/880986295285993472/icons8-hang-10-100_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    background-position: 50% 50%;
+    width: 80%;
+    height: 80%;
+}
+#private-channels-2 .linkButtonIcon-Mlm5d6 {
+    background: url(https://cdn.discordapp.com/attachments/381873284188340224/880978196324036638/1024px-Coa_Illustration_Cross_Swastika_diagonally_positioned.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    background-position: 50% 50%;
+    width: 80%;
+    height: 80%;
+}
+.linkButtonIcon-Mlm5d6 path{
+    display: none;
+}
+.actionIcon-PgcMM2 path:last-child, .actionIcon-PgcMM2 path:nth-child(2n)  {
+    display: none;
+}
+.actionIcon-PgcMM2 {
+    background: url(https://cdn.discordapp.com/attachments/381873284188340224/880979513050288218/phiboLogo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
