@@ -1,19 +1,27 @@
 :root {
-    --background-primary: rgba(35, 35, 35, 1);
-    --background-secondary: rgba(34, 34, 34, 1);
-    --background-tertiary: rgb(32, 32, 32);
-    --background-secondary-alt: rgba(51, 51, 51, 1);
+    --background-primary: rgba(35, 35, 35, .3);
+    --background-secondary: rgba(34, 34, 34, .3);
+    --background-tertiary: rgba(32, 32, 32, .3);
+    --background-secondary-alt: rgba(51, 51, 51, .3);
     --background-modifier-accent: rgba(255, 0, 0, 0.1);
     --divider-color: rgba(255, 0, 0, 0.6);
     --brand-experiment: rgba(255, 0, 0, 0.6);
-    --channeltextarea-background: rgba(68, 68, 68, .5);
+    --channeltextarea-background: rgba(68, 68, 68, .4);
+    
     /* --background-modifier-selected */
 }
-/* body {
-    background: url("https://cdn.discordapp.com/attachments/467688938681794560/881320277433262101/A_Fool_Moon_Night.jpg");
+ body {
+    background: url("https://cdn.discordapp.com/attachments/467688938681794560/881320734184591360/maxresdefault.png");
     background-size: cover;
     background-position: center;
-} */
+}
+.titleBar-AC4pGV {
+    background-color: rgba(32, 32, 32, .7) !important;
+}
+.withFrame-haYltI {
+    margin-top: 0 !important;
+    padding-top: 4px;
+}
 .theme-dark .container-1D34oG {
     background-color: var(--background-primary) !important;
 }
