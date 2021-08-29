@@ -7,6 +7,7 @@
     --divider-color: rgba(255,0,0,0.6);
     --brand-experiment: rgba(255,0,0,0.6);
     --channeltextarea-background: rgba(68, 68, 68, 1);
+    /* --background-modifier-selected */
 }
 /* body {
     background: url("https://cdn.discordapp.com/attachments/467688938681794560/881320277433262101/A_Fool_Moon_Night.jpg");
@@ -50,6 +51,12 @@
 .expandedFolderBackground-1cujaW {
     background-color: var(--background-secondary-alt);
 }
+.folder-1hbNCn {
+    background-color: rgba(68, 68, 68, .5);
+}
+.hover-qTxTR_{
+    box-shadow: 0 0 10px rgba(255,0,0,0.2);
+}
 .wrapper-3NnKdC::after {
     content: "";
     width: 100%;
@@ -70,14 +77,14 @@
 .selected-3LIHYU .content-1x5b-n {
     border-left: solid 2px rgba(255,0,0,0.6) !important;
     padding-left: 10px;
-    background: linear-gradient(to left, #222222, rgba(255,0,0,0.6), red, #222222, #222222);
-    background-size: 1200% 1200%;
+    background: linear-gradient(to left, #4f545c52, rgba(255,0,0,0.6), #4f545c52, #4f545c52);
+    background-size: 600% 600%;
     
-    -webkit-animation: SelectAnim 1s ease-in-out forwards;
-    -moz-animation: SelectAnim 1s ease-in-out forwards;
-    animation: SelectAnim 1s ease-in-out forwards;
+    -webkit-animation: SelectAnim 1s ease-in forwards !important;
+    -moz-animation: SelectAnim 1s ease-in forwards !important;
+    animation: SelectAnim 1s ease-in forwards !important;
     }
-    @-webkit-keyframes SelectAnim {
+    /* @-webkit-keyframes SelectAnim {
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}
         100%{background-position:0% 50%}
@@ -86,11 +93,11 @@
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}
         100%{background-position:0% 50%}
-    }
+    } */
     @keyframes SelectAnim {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
+        0%{background-position: 0% 0%}
+        50%{background-position: 100% 50%}
+        100%{background-position: 130% 50%}
     }
 .numberBadge-2s8kKX {
     width: 20px;
@@ -134,7 +141,6 @@
     transform: translateY(500px);
     transition: transform 0.5s ease-in-out;
 }
-
 
 #private-channels-0 .linkButtonIcon-Mlm5d6 {
     background: url(https://cdn.discordapp.com/attachments/381873284188340224/880986295285993472/icons8-hang-10-100_1.png);
