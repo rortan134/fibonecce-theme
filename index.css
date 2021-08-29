@@ -1,12 +1,12 @@
 :root {
-    --background-primary: rgba(51, 51, 51, 1);
+    --background-primary: rgba(45, 45, 45, 1);
     --background-secondary: rgba(34, 34, 34, 1);
     --background-tertiary: rgb(32, 32, 32);
     --background-secondary-alt: rgba(51, 51, 51, 1);
-    --background-modifier-accent: rgba(255,0,0, 0.1);
-    --divider-color: rgba(255,0,0,0.6);
-    --brand-experiment: rgba(255,0,0,0.6);
-    --channeltextarea-background: rgba(68, 68, 68, 1);
+    --background-modifier-accent: rgba(255, 0, 0, 0.1);
+    --divider-color: rgba(255, 0, 0, 0.6);
+    --brand-experiment: rgba(255, 0, 0, 0.6);
+    --channeltextarea-background: rgba(68, 68, 68, .5);
     /* --background-modifier-selected */
 }
 /* body {
@@ -14,6 +14,16 @@
     background-size: cover;
     background-position: center;
 } */
+.theme-dark .container-1D34oG {
+    background-color: var(--background-primary) !important;
+}
+/* .wrapper-3D2qGf {
+    -webkit-box-shadow: 0px 10px 13px -7px rgba(255, 0, 0, 0.3), 0px 7px 15px 2px rgba(255, 0, 0, 0.3); 
+    box-shadow: 0px 10px 13px -7px rgba(255, 0, 0, 0.3), 0px 7px 15px 2px rgba(255, 0, 0, 0.3);
+} */
+.item-3HknzM .item-PXvHYJ .themed-OHr7kt {
+    background-color: rgba(255, 0, 0, 0.3);
+}
 .panels-j1Uci_ {
     background-color: var(--background-secondary);
 }
@@ -43,21 +53,21 @@
     z-index: 3;
 }
 .selected-aXhQR6 {
-    border-left: solid 2px rgba(255,0,0,0.6) !important;
-}
-.container-1D34oG {
-    background: var(--background-secondary);
+    border-left: solid 2px rgba(255, 0, 0, 0.6) !important;
 }
 .expandedFolderBackground-1cujaW {
     background-color: var(--background-secondary-alt);
 }
 .folder-1hbNCn {
-    background-color: rgba(68, 68, 68, .5);
+    background-color: rgba(68, 68, 68, 0.5);
 }
-.hover-qTxTR_{
-    box-shadow: 0 0 10px rgba(255,0,0,0.2);
+.hover-qTxTR_ {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
 }
-.wrapper-3NnKdC::after {
+.form-2fGMdU {
+    padding: 0 20px;
+}
+/* .wrapper-3NnKdC::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -69,46 +79,72 @@
 }
 .wrapper-3NnKdC:hover::after {
     background: linear-gradient(to bottom, var(--background-secondary), rgba(255,0,0,0.5) 25%, rgba(255,0,0,0.5) 75%, var(--background-secondary) 100%);
-}
-.unreadPillCapStroke-7rkHbg, .isUnread-3Ef-o9, .colorable-1bkp8v.red-33-Lnk, .live-vBWnV6, .mediaBarGrabber-1FqnbN {
-    background: rgba(255,0,0,0.6) !important;
-    box-shadow: 0 0 10px rgba(255,0,0,0.2);
+} */
+.unreadPillCapStroke-7rkHbg,
+.isUnread-3Ef-o9,
+.group-spacing-16 .divider-3_HH5L.beforeGroup-1rH1F0,
+.colorable-1bkp8v.red-33-Lnk,
+.live-vBWnV6,
+.mediaBarGrabber-1FqnbN,
+.numberBadge-2s8kKX,
+.mention-1f5kbO,
+.iconBadge-3qSJIw.participating-1NvRVd {
+    background: rgba(255, 0, 0, 0.6) !important;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
 }
 .selected-3LIHYU .content-1x5b-n {
-    border-left: solid 2px rgba(255,0,0,0.6) !important;
+    border-left: solid 2px rgba(255, 0, 0, 0.6) !important;
     padding-left: 10px;
-    background: linear-gradient(to left, #4f545c52, rgba(255,0,0,0.6), #4f545c52, #4f545c52);
+    background: linear-gradient(
+        to left,
+        #4f545c52,
+        rgba(255, 0, 0, 0.6),
+        #4f545c52,
+        #4f545c52
+    );
     background-size: 600% 600%;
-    
+    transition: border-left 0.2s ease-in;
+
     -webkit-animation: SelectAnim 1s ease-in forwards !important;
     -moz-animation: SelectAnim 1s ease-in forwards !important;
     animation: SelectAnim 1s ease-in forwards !important;
+}
+@-webkit-keyframes SelectAnim {
+    0% {
+        background-position: 0% 50%;
     }
-    /* @-webkit-keyframes SelectAnim {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
+    50% {
+        background-position: -100% 50%;
     }
-    @-moz-keyframes SelectAnim {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    } */
-    @keyframes SelectAnim {
-        0%{background-position: 0% 0%}
-        50%{background-position: 100% 50%}
-        100%{background-position: 130% 50%}
+    100% {
+        background-position: -130% 50%;
     }
+}
+@-moz-keyframes SelectAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: -100% 50%;
+    }
+    100% {
+        background-position: -120% 50%;
+    }
+}
+@keyframes SelectAnim {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: -100% 50%;
+    }
+    100% {
+        background-position: -120% 50%;
+    }
+}
 .numberBadge-2s8kKX {
     width: 20px;
-    background: rgba(255,0,0,0.6) !important;
-    box-shadow: 0 0 10px rgba(255,0,0,0.6);
 }
-.mention-1f5kbO {
-    background: rgba(255,0,0,0.6) !important;
-    box-shadow: 0 0 10px rgba(255,0,0,0.2);
-}
-
 
 .homeIcon-FuNwkv {
     overflow: hidden;
@@ -117,22 +153,25 @@
     height: 100%;
     display: inline-block;
     position: relative;
-    
+
     background: url(https://cdn.discordapp.com/attachments/381873284188340224/880979513050288218/phiboLogo.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 999;
-    transition: background-position .5s ease-in-out;
+    transition: background-position 0.5s ease-in-out;
 }
-.wrapper-1BJsBx:hover .homeIcon-FuNwkv, .selected-bZ3Lue .homeIcon-FuNwkv, .homeIcon-FuNwkv:hover{
-    background-position: left 0px bottom 500px ;
+.wrapper-1BJsBx:hover .homeIcon-FuNwkv,
+.selected-bZ3Lue .homeIcon-FuNwkv,
+.homeIcon-FuNwkv:hover {
+    background-position: left 0px bottom 500px;
     width: 80%;
     height: 80%;
     overflow: hidden;
     border-radius: 10px;
 }
-.homeIcon-FuNwkv:hover path, .selected-bZ3Lue .homeIcon-FuNwkv path  {
+.homeIcon-FuNwkv:hover path,
+.selected-bZ3Lue .homeIcon-FuNwkv path {
     transform: translateY(0px);
 }
 .homeIcon-FuNwkv path {
@@ -141,6 +180,13 @@
     transform: translateY(500px);
     transition: transform 0.5s ease-in-out;
 }
+.buttons-3JBrkn:first-child {
+    transform: translateX(-50px);
+}
+.buttons-3JBrkn:nth-child(2) {
+    transform: translateX(50px);
+}
+
 
 #private-channels-0 .linkButtonIcon-Mlm5d6 {
     background: url(https://cdn.discordapp.com/attachments/381873284188340224/880986295285993472/icons8-hang-10-100_1.png);
@@ -160,10 +206,11 @@
     width: 80%;
     height: 80%;
 }
-.linkButtonIcon-Mlm5d6 path{
+.linkButtonIcon-Mlm5d6 path {
     display: none;
 }
-.actionIcon-PgcMM2 path:last-child, .actionIcon-PgcMM2 path:nth-child(2n)  {
+.actionIcon-PgcMM2 path:last-child,
+.actionIcon-PgcMM2 path:nth-child(2n) {
     display: none;
 }
 .actionIcon-PgcMM2 {
