@@ -3,10 +3,11 @@
     --background-secondary: rgba(34, 34, 34, .3);
     --background-tertiary: rgba(32, 32, 32, .3);
     --background-secondary-alt: rgba(51, 51, 51, .3);
+    --channeltextarea-background: rgba(68, 68, 68, .4);
     --background-modifier-accent: rgba(255, 0, 0, 0.1);
     --divider-color: rgba(255, 0, 0, 0.6);
     --brand-experiment: rgba(255, 0, 0, 0.6);
-    --channeltextarea-background: rgba(68, 68, 68, .4);
+    --text-link: rgba(255, 0, 0, .7);
     
     /* --background-modifier-selected */
 }
@@ -25,10 +26,6 @@
 .theme-dark .container-1D34oG {
     background-color: var(--background-primary) !important;
 }
-/* .wrapper-3D2qGf {
-    -webkit-box-shadow: 0px 10px 13px -7px rgba(255, 0, 0, 0.3), 0px 7px 15px 2px rgba(255, 0, 0, 0.3); 
-    box-shadow: 0px 10px 13px -7px rgba(255, 0, 0, 0.3), 0px 7px 15px 2px rgba(255, 0, 0, 0.3);
-} */
 .item-3HknzM .item-PXvHYJ .themed-OHr7kt {
     background-color: rgba(255, 0, 0, 0.3);
 }
@@ -153,7 +150,6 @@
 .numberBadge-2s8kKX {
     width: 20px;
 }
-
 .homeIcon-FuNwkv {
     overflow: hidden;
     border-radius: 15px;
@@ -188,13 +184,6 @@
     transform: translateY(500px);
     transition: transform 0.5s ease-in-out;
 }
-.buttons-3JBrkn:first-child {
-    transform: translateX(-50px);
-}
-.buttons-3JBrkn:nth-child(2) {
-    transform: translateX(50px);
-}
-
 
 #private-channels-0 .linkButtonIcon-Mlm5d6 {
     background: url(https://cdn.discordapp.com/attachments/381873284188340224/880986295285993472/icons8-hang-10-100_1.png);
