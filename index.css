@@ -8,7 +8,7 @@
     --divider-color: rgba(255, 0, 0, 0.6);
     --brand-experiment: rgba(255, 0, 0, 0.6);
     --text-link: rgba(255, 0, 0, .7);
-    
+    --background-accent: rgba(255, 0, 0, 0.5);
     /* --background-modifier-selected */
 }
  body {
@@ -60,9 +60,6 @@
     position: relative;
     z-index: 3;
 }
-.selected-aXhQR6 {
-    border-left: solid 2px rgba(255, 0, 0, 0.6) !important;
-}
 .expandedFolderBackground-1cujaW {
     background-color: var(--background-secondary-alt);
 }
@@ -109,7 +106,7 @@
     background: rgba(255, 0, 0, 0.6) !important;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
 }
-.selected-3LIHYU .content-1x5b-n {
+.selected-3LIHYU .content-1x5b-n, .selected-aXhQR6 {
     border-left: solid 2px rgba(255, 0, 0, 0.6) !important;
     padding-left: 10px;
     background: linear-gradient(
@@ -125,6 +122,9 @@
     -webkit-animation: SelectAnim 1s ease-in forwards !important;
     -moz-animation: SelectAnim 1s ease-in forwards !important;
     animation: SelectAnim 1s ease-in forwards !important;
+}
+.selected-aXhQR6 {
+    padding-left: 3px !important;
 }
 @-webkit-keyframes SelectAnim {
     0% {
@@ -218,6 +218,13 @@
     height: 100%;
     filter: invert(1);
 }
+.barBase-1c2Rfb{
+    left: 20px;
+    right: 20px;
+}
+.button-38aScr:hover {
+    background-color: rgba(255, 0, 0, .4) !important;
+}
 .children-3rEycc .iconItem-F7GRxr .actionIcon-PgcMM2 path:first-child {
     position: absolute;
     left: 50%;
@@ -225,26 +232,51 @@
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
 }
 
-.children-3rEycc:last-child svg::before {
-    content: "";
-    background: url(https://cdn.discordapp.com/attachments/467688938681794560/881955442484469820/drawingeditpenpencilwritewritingicon-1320165736093886255.png);
-    position: relative;
-    display: inline-block;
-    background-size: cover;
-    background-position: 0% 0%;
-    background-repeat: no-repeat;
-    filter: contrast(200%);
-    width: 15px;
-    height: 15px;
-    z-index: 99;
-}
-.actionIcon-PgcMM2 path:last-child,
-.actionIcon-PgcMM2 path:nth-child(2n) {
+.actionIcon-PgcMM2 path:nth-child(2n),
+.children-3rEycc .iconItem-F7GRxr:first-of-type .actionIcon-PgcMM2 path:last-child {
     display: none;
 }
+/* .children-3rEycc .iconItem-F7GRxr:first-child .actionIcon-PgcMM2:first-child {
+    outline: solid red 2px;
+} */
+/* .children-3rEycc .iconItem-F7GRxr:last-child .actionIcon-PgcMM2 {
+    background: url(https://cdn.discordapp.com/attachments/381873284188340224/882010443537850378/unknown.png);
+} */
 .actionIcon-PgcMM2:last-child {
     background: url(https://cdn.discordapp.com/attachments/381873284188340224/880979513050288218/phiboLogo.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0%;
+}
+
+/*https://cdn.discordapp.com/attachments/467688938681794560/881955442484469820/drawingeditpenpencilwritewritingicon-1320165736093886255.png*/
+
+.children-3rEycc .iconItem-F7GRxr:last-child path {
+    left: 50%;
+    transform: translate(15%, -15%) scale(1) !important;
+    width: 30% !important;
+    height: 30% !important;
+} 
+
+
+/* Config Tab */
+
+.sidebarRegion-VFTUkN, .sidebarRegionScroller-3MXcoP {
+    justify-content: flex-start;
+}
+.sidebarRegionScroller-3MXcoP {
+    flex: 1 1 auto;
+}
+.sidebar-CFHs9e {
+    width: 100%;
+    padding: 60px 6px 60px 30px;
+}
+.contentColumn-2hrIYH, .customColumn-Rb6toI {
+    max-width: 900px;
+}
+.contentRegion-3nDuYy {
+    flex: 1 1 900px;
+}
+.item-PXvHYJ {
+    font-size: 20px;
 }
