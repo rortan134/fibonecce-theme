@@ -1,2 +1,2 @@
 # Fibonecce-Theme
-Goose Mod Theme
+### A Custom Red-based with transparency Discord Theme
