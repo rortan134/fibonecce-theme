@@ -382,23 +382,11 @@ User Popup
   .footer-3UKYOU {
     background-color: rgba(32, 32, 32, 0.85) !important;
 }
-
-/* .userPopout-xaxa6l::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    z-index: -1;
-} */
-.userPopout-xaxa6l /* .headerTopWithCustomStatus-1DHAjX, .body-3HBlXn, .footer-3UKYOU, .headerTop-3vNv-a*/ {
+.userPopout-xaxa6l {
     backdrop-filter: blur( 3.5px );
     -webkit-backdrop-filter: blur( 3.5px );
     /* background-color: rgba(32, 32, 32, 0.95); */
 }
-
 /* 
 ==============================
 Channel Icons 
