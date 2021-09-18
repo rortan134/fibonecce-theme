@@ -312,15 +312,16 @@ Home Icon
 Popup Containers 
 ==============================
 */
+
+
 .messagesPopoutWrap-1MQ1bW,
 .theme-dark .container-2x5lvQ .header-2C89wJ,
 .theme-dark .container-2x5lvQ section,
 .browser-2NpbWS,
 .noiseCancellationPopout-iRK2A0,
-.menu-3sdvDG,
+/* .menu-3sdvDG, */
 .theme-dark .root-1gCeng,
-.container-enaOkj,
-.layer-v9HyYc:not(.scroller-3BxosC, .submenuContainer-2gbm7M) {
+.container-enaOkj {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(3.5px);
@@ -328,8 +329,8 @@ Popup Containers
     background-color: rgba(32, 32, 32, 0.5);
 }
 .menu-3sdvDG,
-.theme-dark .root-1gCeng {
-    background-color: rgba(32, 32, 32, 0.85) !important;
+.theme-dark .footer-2gL1pp {
+    background-color: rgba(47, 49, 54, 0.5);
 }
 .listItems-1uJgMC .button-38aScr:hover,
 .bottomControls-lIJyYL .flex-1xMQg5:last-of-type .button-38aScr:hover {
