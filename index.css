@@ -1,3 +1,4 @@
+@import url("https://raw.githubusercontent.com/hyblocker/pixelcord/v4/modules/appearance/icons/shapes/squircle.css");
 :root {
     --background-primary: rgba(35, 35, 35, 0.35);
     --background-secondary: rgba(34, 34, 34, 0.3);
@@ -9,6 +10,7 @@
     --brand-experiment: rgba(255, 0, 0, 0.6);
     --text-link: rgba(255, 0, 0, 0.7);
     --background-accent: rgba(255, 0, 0, 0.5);
+    --deprecated-quickswitcher-input-background: rgba(68, 68, 68, 0.6);
     /* --background-floating: rgba(32, 32, 32, .7);*/
     /* --background-modifier-selected */
 }
@@ -147,13 +149,7 @@ body {
 .selected-aXhQR6 {
     border-left: solid 2px rgba(255, 0, 0, 0.6) !important;
     padding-left: 10px;
-    background: linear-gradient(
-        to left,
-        #4f545c52,
-        rgba(255, 0, 0, 0.6),
-        #4f545c52,
-        #4f545c52
-    );
+    background: linear-gradient(to left, #4f545c52, rgba(255, 0, 0, 0.6), #4f545c52, #4f545c52);
     background-size: 600% 600%;
     transition: border-left 0.2s ease-in;
 
@@ -211,7 +207,9 @@ body {
 Home Icon 
 ==============================
 */
-
+.childWrapper-anI2G9 {
+    background: var(--channeltextarea-background);
+}
 .homeIcon-FuNwkv {
     overflow: hidden;
     border-radius: 15px;
@@ -312,8 +310,6 @@ Home Icon
 Popup Containers 
 ==============================
 */
-
-
 .messagesPopoutWrap-1MQ1bW,
 .theme-dark .container-2x5lvQ .header-2C89wJ,
 .theme-dark .container-2x5lvQ section,
@@ -321,7 +317,8 @@ Popup Containers
 .noiseCancellationPopout-iRK2A0,
 /* .menu-3sdvDG, */
 .theme-dark .root-1gCeng,
-.container-enaOkj {
+.container-enaOkj, .menu-3sdvDG,
+.theme-dark .footer-2gL1pp, .wrapper-3NnKdC, .theme-dark .autocomplete-1vrmpx {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(3.5px);
@@ -329,8 +326,12 @@ Popup Containers
     background-color: rgba(32, 32, 32, 0.5);
 }
 .menu-3sdvDG,
+.expandedFolderBackground-3ZDF05 {
+    background: transparent;
+}
+.menu-3sdvDG,
 .theme-dark .footer-2gL1pp {
-    background-color: rgba(47, 49, 54, 0.5);
+    background-color: rgba(0, 0, 0, 0.35);
 }
 .listItems-1uJgMC .button-38aScr:hover,
 .bottomControls-lIJyYL .flex-1xMQg5:last-of-type .button-38aScr:hover {
@@ -371,198 +372,91 @@ User Popup
     font-size: 52px;
     color: transparent;
 }
-.headerTop-3vNv-a::before,
-.headerTop-3vNv-a::after,
-.body-3HBlXna::before,
-.body-3HBlXna::after {
+.userPopout-xaxa6l::before,
+.userPopout-xaxa6l::after {
     position: absolute;
+    z-index: -1;
     top: 50%;
     left: 50%;
-    width: 3em;
-    height: 3em;
+    width: 6em;
+    height: 6em;
     content: ".";
     mix-blend-mode: screen;
     animation: 44s -27s move infinite ease-in-out alternate;
 }
-.body-3HBlXna::before {
+.userPopout-xaxa6l::before {
     text-shadow: 1.5083754291em 0.7047948515em 7px rgba(255, 217, 0, 0.9),
         1.4128094488em 2.4250445948em 7px rgba(255, 0, 90, 0.9),
         -0.2939101109em 1.7622795559em 7px rgba(255, 178, 0, 0.9),
-        1.0399485971em 1.8239539912em 7px rgba(88, 0, 255, 0.9),
-        -0.212525342em 0.6016930341em 7px rgba(0, 255, 27, 0.9),
+        1.0399485971em 1.8239539912em 7px rgba(88, 0, 255, 0.9), -0.212525342em 0.6016930341em 7px rgba(0, 255, 27, 0.9),
         -0.2079610388em 0.1569285894em 7px rgba(0, 255, 204, 0.9),
-        1.1766466206em 1.599968777em 7px rgba(0, 255, 35, 0.9),
-        0.7724773352em 0.6301742827em 7px rgba(255, 68, 0, 0.9),
+        1.1766466206em 1.599968777em 7px rgba(0, 255, 35, 0.9), 0.7724773352em 0.6301742827em 7px rgba(255, 68, 0, 0.9),
         0.6496573815em 1.4156389677em 7px rgba(255, 120, 0, 0.9),
         1.4279132167em 2.3686995269em 7px rgba(0, 202, 255, 0.9),
         1.3656540706em -0.2513205964em 7px rgba(255, 0, 34, 0.9),
-        2.4712621238em 1.7637013592em 7px rgba(53, 0, 255, 0.9),
-        1.0086245343em 1.7888154767em 7px rgba(79, 0, 255, 0.9),
+        2.4712621238em 1.7637013592em 7px rgba(53, 0, 255, 0.9), 1.0086245343em 1.7888154767em 7px rgba(79, 0, 255, 0.9),
         0.9932429956em 2.1662259704em 7px rgba(0, 255, 161, 0.9),
         0.3880993763em 0.3311162555em 7px rgba(0, 38, 255, 0.9),
         2.1188224224em 0.3457520726em 7px rgba(0, 255, 216, 0.9),
         0.5769220889em -0.2443743172em 7px rgba(108, 255, 0, 0.9),
         0.7543319136em 2.4768181456em 7px rgba(255, 0, 151, 0.9),
-        2.0522913058em 1.5896659678em 7px rgba(0, 255, 66, 0.9),
-        1.018900392em 0.0739068332em 7px rgba(24, 255, 0, 0.9),
-        0.4039406208em 1.0671276811em 7px rgba(0, 255, 6, 0.9),
-        0.6466292247em 1.8551054754em 7px rgba(255, 0, 210, 0.9),
+        2.0522913058em 1.5896659678em 7px rgba(0, 255, 66, 0.9), 1.018900392em 0.0739068332em 7px rgba(24, 255, 0, 0.9),
+        0.4039406208em 1.0671276811em 7px rgba(0, 255, 6, 0.9), 0.6466292247em 1.8551054754em 7px rgba(255, 0, 210, 0.9),
         0.6395481076em -0.3722554272em 7px rgba(255, 253, 0, 0.9),
         2.3277395321em -0.2323095308em 7px rgba(255, 18, 0, 0.9),
         0.9546994232em 1.0144091843em 7px rgba(0, 82, 255, 0.9),
         1.3868935362em -0.3466737778em 7px rgba(0, 204, 255, 0.9),
-        1.0487110638em 0.1037885833em 7px rgba(0, 53, 255, 0.9),
-        0.7010677888em -0.077187697em 7px rgba(78, 0, 255, 0.9),
+        1.0487110638em 0.1037885833em 7px rgba(0, 53, 255, 0.9), 0.7010677888em -0.077187697em 7px rgba(78, 0, 255, 0.9),
         0.4362990356em 1.8617770174em 7px rgba(231, 0, 255, 0.9),
-        0.0936000939em -0.2576334598em 7px rgba(255, 233, 0, 0.9),
-        0.04996268em 1.6543559131em 7px rgba(0, 59, 255, 0.9),
+        0.0936000939em -0.2576334598em 7px rgba(255, 233, 0, 0.9), 0.04996268em 1.6543559131em 7px rgba(0, 59, 255, 0.9),
         0.3892228704em 1.9012294371em 7px rgba(255, 0, 142, 0.9),
         1.9068909572em 0.2975864578em 7px rgba(255, 88, 0, 0.9),
         2.1925818987em -0.4094493658em 7px rgba(16, 255, 0, 0.9),
         -0.0130948472em 1.0397431742em 7px rgba(0, 170, 255, 0.9),
         2.2841622393em 1.0267626814em 7px rgba(0, 237, 255, 0.9),
         0.3979446782em 0.3140463387em 7px rgba(139, 0, 255, 0.9),
-        0.8260594462em 0.8531214348em 7px rgba(201, 255, 0, 0.9),
-        0.082769075em 0.900729821em 7px rgba(255, 99, 0, 0.9),
+        0.8260594462em 0.8531214348em 7px rgba(201, 255, 0, 0.9), 0.082769075em 0.900729821em 7px rgba(255, 99, 0, 0.9),
         0.7453092523em 1.6536789422em 7px rgba(0, 255, 85, 0.9),
         1.4825224245em -0.1879225446em 7px rgba(255, 0, 141, 0.9);
     animation-duration: 44s;
     animation-delay: -27s;
 }
-.headerTop-3vNv-a::after {
+.userPopout-xaxa6l::after {
     text-shadow: 1.5083754291em 0.7047948515em 7px rgba(255, 217, 0, 0.9),
         1.4128094488em 2.4250445948em 7px rgba(255, 0, 90, 0.9),
         -0.2939101109em 1.7622795559em 7px rgba(255, 178, 0, 0.9),
-        1.0399485971em 1.8239539912em 7px rgba(88, 0, 255, 0.9),
-        -0.212525342em 0.6016930341em 7px rgba(0, 255, 27, 0.9),
+        1.0399485971em 1.8239539912em 7px rgba(88, 0, 255, 0.9), -0.212525342em 0.6016930341em 7px rgba(0, 255, 27, 0.9),
         -0.2079610388em 0.1569285894em 7px rgba(0, 255, 204, 0.9),
-        1.1766466206em 1.599968777em 7px rgba(0, 255, 35, 0.9),
-        0.7724773352em 0.6301742827em 7px rgba(255, 68, 0, 0.9),
+        1.1766466206em 1.599968777em 7px rgba(0, 255, 35, 0.9), 0.7724773352em 0.6301742827em 7px rgba(255, 68, 0, 0.9),
         0.6496573815em 1.4156389677em 7px rgba(255, 120, 0, 0.9),
         1.4279132167em 2.3686995269em 7px rgba(0, 202, 255, 0.9),
         1.3656540706em -0.2513205964em 7px rgba(255, 0, 34, 0.9),
-        2.4712621238em 1.7637013592em 7px rgba(53, 0, 255, 0.9),
-        1.0086245343em 1.7888154767em 7px rgba(79, 0, 255, 0.9),
+        2.4712621238em 1.7637013592em 7px rgba(53, 0, 255, 0.9), 1.0086245343em 1.7888154767em 7px rgba(79, 0, 255, 0.9),
         0.9932429956em 2.1662259704em 7px rgba(0, 255, 161, 0.9),
         0.3880993763em 0.3311162555em 7px rgba(0, 38, 255, 0.9),
         2.1188224224em 0.3457520726em 7px rgba(0, 255, 216, 0.9),
         0.5769220889em -0.2443743172em 7px rgba(108, 255, 0, 0.9),
         0.7543319136em 2.4768181456em 7px rgba(255, 0, 151, 0.9),
-        2.0522913058em 1.5896659678em 7px rgba(0, 255, 66, 0.9),
-        1.018900392em 0.0739068332em 7px rgba(24, 255, 0, 0.9),
-        0.4039406208em 1.0671276811em 7px rgba(0, 255, 6, 0.9),
-        0.6466292247em 1.8551054754em 7px rgba(255, 0, 210, 0.9),
+        2.0522913058em 1.5896659678em 7px rgba(0, 255, 66, 0.9), 1.018900392em 0.0739068332em 7px rgba(24, 255, 0, 0.9),
+        0.4039406208em 1.0671276811em 7px rgba(0, 255, 6, 0.9), 0.6466292247em 1.8551054754em 7px rgba(255, 0, 210, 0.9),
         0.6395481076em -0.3722554272em 7px rgba(255, 253, 0, 0.9),
         2.3277395321em -0.2323095308em 7px rgba(255, 18, 0, 0.9),
         0.9546994232em 1.0144091843em 7px rgba(0, 82, 255, 0.9),
         1.3868935362em -0.3466737778em 7px rgba(0, 204, 255, 0.9),
-        1.0487110638em 0.1037885833em 7px rgba(0, 53, 255, 0.9),
-        0.7010677888em -0.077187697em 7px rgba(78, 0, 255, 0.9),
+        1.0487110638em 0.1037885833em 7px rgba(0, 53, 255, 0.9), 0.7010677888em -0.077187697em 7px rgba(78, 0, 255, 0.9),
         0.4362990356em 1.8617770174em 7px rgba(231, 0, 255, 0.9),
-        0.0936000939em -0.2576334598em 7px rgba(255, 233, 0, 0.9),
-        0.04996268em 1.6543559131em 7px rgba(0, 59, 255, 0.9),
+        0.0936000939em -0.2576334598em 7px rgba(255, 233, 0, 0.9), 0.04996268em 1.6543559131em 7px rgba(0, 59, 255, 0.9),
         0.3892228704em 1.9012294371em 7px rgba(255, 0, 142, 0.9),
         1.9068909572em 0.2975864578em 7px rgba(255, 88, 0, 0.9),
         2.1925818987em -0.4094493658em 7px rgba(16, 255, 0, 0.9),
         -0.0130948472em 1.0397431742em 7px rgba(0, 170, 255, 0.9),
         2.2841622393em 1.0267626814em 7px rgba(0, 237, 255, 0.9),
         0.3979446782em 0.3140463387em 7px rgba(139, 0, 255, 0.9),
-        0.8260594462em 0.8531214348em 7px rgba(201, 255, 0, 0.9),
-        0.082769075em 0.900729821em 7px rgba(255, 99, 0, 0.9),
+        0.8260594462em 0.8531214348em 7px rgba(201, 255, 0, 0.9), 0.082769075em 0.900729821em 7px rgba(255, 99, 0, 0.9),
         0.7453092523em 1.6536789422em 7px rgba(0, 255, 85, 0.9),
         1.4825224245em -0.1879225446em 7px rgba(255, 0, 141, 0.9);
     animation-duration: 44s;
     animation-delay: -27s;
-}
-.headerTop-3vNv-a::before {
-    text-shadow: -0.4588313489em 0.8572084988em 7px rgba(101, 255, 0, 0.9),
-        2.0876357266em 1.6469528149em 7px rgba(255, 0, 107, 0.9),
-        1.542470906em 1.1049784631em 7px rgba(0, 53, 255, 0.9),
-        -0.2869652877em 0.268447857em 7px rgba(0, 255, 227, 0.9),
-        1.1020490039em -0.4303180119em 7px rgba(255, 105, 0, 0.9),
-        2.1260320978em 0.1223407153em 7px rgba(0, 255, 78, 0.9),
-        1.0240014197em 0.2319046978em 7px rgba(255, 0, 60, 0.9),
-        0.8040151514em -0.1541990537em 7px rgba(0, 160, 255, 0.9),
-        1.2502111297em 0.7055343936em 7px rgba(255, 0, 137, 0.9),
-        2.1082405987em 0.739291919em 7px rgba(255, 215, 0, 0.9),
-        1.9562871256em 0.0060358775em 7px rgba(0, 255, 116, 0.9),
-        0.0058504615em 1.2836439104em 7px rgba(0, 240, 255, 0.9),
-        1.209355907em 0.3282297845em 7px rgba(255, 0, 116, 0.9),
-        1.9458429142em -0.1627776162em 7px rgba(202, 0, 255, 0.9),
-        2.3511131311em 1.943529583em 7px rgba(86, 255, 0, 0.9),
-        2.062722075em 1.6671580588em 7px rgba(90, 0, 255, 0.9),
-        0.8442067336em 0.6019997295em 7px rgba(0, 109, 255, 0.9),
-        2.411465374em 0.8776451651em 7px rgba(0, 244, 255, 0.9),
-        1.8281067129em 0.4121967704em 7px rgba(255, 0, 87, 0.9),
-        -0.191369062em 0.7311527164em 7px rgba(255, 154, 0, 0.9),
-        1.9836324351em 2.4250612983em 7px rgba(0, 124, 255, 0.9),
-        1.5651238658em -0.0028589745em 7px rgba(255, 120, 0, 0.9),
-        0.6965611024em 1.5362393407em 7px rgba(97, 255, 0, 0.9),
-        1.7472063327em 1.2232680832em 7px rgba(122, 0, 255, 0.9),
-        0.6532612943em 1.1245143449em 7px rgba(48, 255, 0, 0.9),
-        0.6364403913em 2.0842822584em 7px rgba(0, 255, 39, 0.9),
-        -0.3338265883em 0.3460789143em 7px rgba(45, 0, 255, 0.9),
-        1.1045759138em 0.8905266398em 7px rgba(244, 255, 0, 0.9),
-        1.7957097048em 0.5271561335em 7px rgba(255, 0, 41, 0.9),
-        0.3024954502em 1.0740859142em 7px rgba(217, 0, 255, 0.9),
-        1.5249586912em 1.3566955276em 7px rgba(0, 42, 255, 0.9),
-        2.1608492866em 1.8969788124em 7px rgba(255, 0, 54, 0.9),
-        1.2256780842em 0.1250520884em 7px rgba(255, 0, 125, 0.9),
-        1.0800190017em 1.6155865845em 7px rgba(0, 38, 255, 0.9),
-        0.6111148499em 1.9357037095em 7px rgba(255, 0, 224, 0.9),
-        1.1461477035em -0.1867282517em 7px rgba(89, 0, 255, 0.9),
-        1.0666676106em -0.3024445144em 7px rgba(0, 255, 72, 0.9),
-        -0.1804521974em -0.4915862756em 7px rgba(22, 0, 255, 0.9),
-        -0.2726818058em 0.1684928594em 7px rgba(255, 0, 106, 0.9),
-        -0.2037164665em 2.06037778em 7px rgba(255, 0, 6, 0.9),
-        0.3912338286em -0.4544232994em 7px rgba(255, 0, 227, 0.9);
-    animation-duration: 42s;
-    animation-delay: -23s;
-}
-.headerTop-3vNv-a::after {
-    text-shadow: 0.4514588562em -0.0501910601em 7px rgba(255, 0, 168, 0.9),
-        2.1595991208em 0.6233561172em 7px rgba(255, 50, 0, 0.9),
-        -0.1533218778em -0.1262223579em 7px rgba(255, 250, 0, 0.9),
-        1.7778989862em -0.2046764943em 7px rgba(255, 84, 0, 0.9),
-        0.2560944543em 0.6657850193em 7px rgba(32, 0, 255, 0.9),
-        1.3508466428em 2.4860764027em 7px rgba(22, 255, 0, 0.9),
-        1.1617572793em 2.0648652408em 7px rgba(211, 255, 0, 0.9),
-        1.9796164864em 0.2547978041em 7px rgba(92, 255, 0, 0.9),
-        1.0599271663em 1.6426098806em 7px rgba(0, 255, 207, 0.9),
-        1.0627319577em -0.113604967em 7px rgba(0, 255, 241, 0.9),
-        -0.4748890259em 0.4544512689em 7px rgba(255, 0, 219, 0.9),
-        0.7574231196em 0.928752585em 7px rgba(87, 255, 0, 0.9),
-        1.22400439em 1.4956752652em 7px rgba(255, 162, 0, 0.9),
-        1.5308313763em 2.0847491328em 7px rgba(0, 255, 238, 0.9),
-        1.6174180801em 0.9442614429em 7px rgba(0, 152, 255, 0.9),
-        -0.0422220937em 2.1214199354em 7px rgba(160, 0, 255, 0.9),
-        1.0216789027em 2.4376904044em 7px rgba(255, 68, 0, 0.9),
-        0.5797102495em 1.5117254213em 7px rgba(255, 0, 237, 0.9),
-        -0.0343194022em -0.1507345855em 7px rgba(0, 255, 156, 0.9),
-        1.8725754221em 2.0476670812em 7px rgba(0, 140, 255, 0.9),
-        -0.2632706044em 1.8579597375em 7px rgba(125, 255, 0, 0.9),
-        1.1968473553em -0.4208934887em 7px rgba(0, 148, 255, 0.9),
-        -0.3135111582em -0.1605301458em 7px rgba(255, 151, 0, 0.9),
-        2.0003505288em 1.742770714em 7px rgba(255, 87, 0, 0.9),
-        0.4707486227em -0.0345638529em 7px rgba(0, 38, 255, 0.9),
-        -0.0243400327em 0.6079489549em 7px rgba(255, 132, 0, 0.9),
-        -0.4806747607em 1.2600378417em 7px rgba(255, 111, 0, 0.9),
-        -0.3107234549em 0.0546444104em 7px rgba(154, 255, 0, 0.9),
-        1.7689720987em 0.6397051597em 7px rgba(0, 255, 85, 0.9),
-        0.1125500964em -0.2848370295em 7px rgba(0, 255, 119, 0.9),
-        1.9579987528em 0.8999478146em 7px rgba(38, 255, 0, 0.9),
-        0.4266407955em 2.3419449154em 7px rgba(254, 255, 0, 0.9),
-        -0.3050370986em 0.6239766109em 7px rgba(0, 255, 86, 0.9),
-        1.8606725782em -0.212350358em 7px rgba(255, 0, 156, 0.9),
-        0.2387553785em 1.8483716509em 7px rgba(71, 255, 0, 0.9),
-        0.0328843619em 0.7488855327em 7px rgba(163, 255, 0, 0.9),
-        0.5669187469em 0.485073879em 7px rgba(17, 0, 255, 0.9),
-        0.9893232077em 0.6174492424em 7px rgba(0, 255, 184, 0.9),
-        0.7629675574em 0.0944137015em 7px rgba(0, 255, 149, 0.9),
-        0.5381461443em 0.8291308689em 7px rgba(58, 0, 255, 0.9),
-        0.2226318018em -0.465312048em 7px rgba(255, 241, 0, 0.9);
-    animation-duration: 41s;
-    animation-delay: -19s;
 }
 @keyframes move {
     from {
@@ -573,13 +467,14 @@ User Popup
     }
 }
 .footer-3UKYOU {
-    background-color: rgba(32, 32, 32, 0.85) !important;
+    background-color: transparent !important;
 }
 .userPopout-xaxa6l {
     backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(3.5px);
     /* background-color: rgba(32, 32, 32, 0.95); */
 }
+
 /* 
 ==============================
 Channel Icons 
@@ -600,10 +495,7 @@ Channel Icons
     height: 30% !important;
 }
 .actionIcon-PgcMM2 path:nth-child(2n),
-.children-3rEycc
-    .iconItem-F7GRxr:first-of-type
-    .actionIcon-PgcMM2
-    path:last-child {
+.children-3rEycc .iconItem-F7GRxr:first-of-type .actionIcon-PgcMM2 path:last-child {
     display: none;
 }
 .actionIcon-PgcMM2:last-child {
@@ -613,10 +505,8 @@ Channel Icons
     background-position: 50% 0%;
 }
 .avatarSpeaking-2IGMRN {
-    -webkit-box-shadow: inset 0 0 0 2px hsl(0, 65%, 43.9%),
-        inset 0 0 0 3px var(--background-secondary);
-    box-shadow: inset 0 0 0 2px hsl(0, 65%, 43.9%),
-        inset 0 0 0 3px var(--background-secondary);
+    -webkit-box-shadow: inset 0 0 0 2px hsl(0, 65%, 43.9%), inset 0 0 0 3px var(--background-secondary);
+    box-shadow: inset 0 0 0 2px hsl(0, 65%, 43.9%), inset 0 0 0 3px var(--background-secondary);
 }
 /* 
 ==============================
@@ -643,4 +533,298 @@ Config Tab
 }
 .side-8zPYf6 > .item-PXvHYJ {
     font-size: 20px;
+}
+/* ====================================
+    Status selection
+    =================================== */
+#status-picker-custom-status,
+#status-picker-switch-account {
+    margin-top: 4px;
+}
+#status-picker .mask-1qbNWk {
+    height: 18px;
+    width: 18px;
+    margin-left: 2px;
+}
+#status-picker .description-2L932D,
+#status-picker .betaTag-2ehOEB {
+    display: none;
+}
+#status-picker .status-1fhblQ {
+    margin-left: 8px;
+}
+#status-picker .customEmojiPlaceholder-37iZ_j,
+#status-picker .switchAccountsIcon-355frb {
+    margin-left: 0px;
+}
+#status-picker .customEmojiPlaceholder-37iZ_j {
+    background-image: none;
+    background-color: var(--interactive-normal);
+    mask: var(--icon) center/contain no-repeat;
+    -webkit-mask: var(--icon) center/contain no-repeat;
+    width: 22px;
+    height: 22px;
+    --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Crect fill='none' height='24' width='24'/%3E%3Cpath d='M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2z M8.5,8C9.33,8,10,8.67,10,9.5 S9.33,11,8.5,11S7,10.33,7,9.5S7.67,8,8.5,8z M16.75,14.75C15.8,16.39,14.03,17.5,12,17.5s-3.8-1.11-4.75-2.75 C7.06,14.42,7.31,14,7.69,14h8.62C16.7,14,16.94,14.42,16.75,14.75z M15.5,11c-0.83,0-1.5-0.67-1.5-1.5S14.67,8,15.5,8 S17,8.67,17,9.5S16.33,11,15.5,11z'/%3E%3C/svg%3E");
+}
+#status-picker .switchAccountsIcon-355frb {
+    background-image: none;
+    background-color: var(--interactive-normal);
+    mask: var(--icon) center/contain no-repeat;
+    -webkit-mask: var(--icon) center/contain no-repeat;
+    width: 22px;
+    height: 22px;
+    --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cg%3E%3Crect fill='none' height='24' width='24'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M17,20H4V7c0-0.55-0.45-1-1-1S2,6.45,2,7v13c0,1.1,0.9,2,2,2h13c0.55,0,1-0.45,1-1S17.55,20,17,20z M20,2H8 C6.9,2,6,2.9,6,4v12c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M14,5c1.66,0,3,1.34,3,3c0,1.66-1.34,3-3,3 s-3-1.34-3-3C11,6.34,12.34,5,14,5z M7.76,16c1.47-1.83,3.71-3,6.24-3s4.77,1.17,6.24,3H7.76z'/%3E%3C/g%3E%3C/svg%3E");
+}
+#status-picker .colorDefault-2K3EoJ.focused-3afm-j .customEmojiPlaceholder-37iZ_j,
+#status-picker .colorDefault-2K3EoJ.focused-3afm-j .switchAccountsIcon-355frb {
+    background: var(--interactive-active);
+}
+.colorDefault-2K3EoJ.focused-3afm-j {
+    background-color: var(--brand-experiment) !important;
+}
+.contentColumnDefault-1VQkGM > div > :nth-child(1) {
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: none;
+}
+/* fix for icon */
+.dropperIconButton-2shYII {
+    width: 69px;
+}
+.listItem-2Ig28I .pill-ZqtR4i span[style*="40px"] {
+    background-color: var(--background-accent);
+}
+/* fix audio previews being crumpled */
+.audioMetadata-3zOuGv::before {
+    min-width: 24px;
+}
+/* Captilize Channel Names & Headers */
+.headerIcon-1qrXTN + .headerLabel-3dG4M-,
+.children-19S4PO > h3,
+.item-PXvHYJ,
+.name-23GUGE {
+    text-transform: capitalize;
+}
+.searchBar-3dMhjb {
+    align-items: center;
+}
+.focused-31_ccS .searchBar-3dMhjb,
+.open-6_Y_aH .searchBar-3dMhjb,
+.input-cIJ7To.focused-1mmYsC,
+.input-cIJ7To:focus {
+    border: solid 1.5px var(--background-accent) !important;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.3) !important;
+}
+.children-19S4PO .mention.iconMentionText-8GCluA {
+    padding-left: 1rem !important;
+}
+/* Fix the channel icon being oversized in embeds and channel topics */
+.topic-TCb_qw > .wrapper-3WhCwL > .channelIcon-1MN1lz,
+.embedFooterText-28V_Wb > .wrapper-3WhCwL > .channelIcon-1MN1lz {
+    width: calc(1.05rem * 1.05 / 1.3);
+    height: 1.05rem;
+}
+/* White badges (on hover) */
+.clickable-17BDii:hover,
+.powercord-badge-wrapper:hover {
+    filter: brightness(500%) !important;
+}
+/* Stops community server icons from shrinking in emoji popouts*/
+.guildSection-1EoFKd > .flex-1xMQg5 > svg {
+    flex-shrink: 0;
+}
+/* Compact Reactions */
+.message-2qnXI6:hover .reactionCount-2mvXRV {
+    font-size: 14px;
+    transform: translate(0px);
+    transition-delay: 0s;
+}
+.message-2qnXI6:hover .reaction-1hd86g {
+    max-width: 90px;
+    width: auto;
+}
+.reaction-1hd86g {
+    max-width: 30px;
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+}
+.reactionCount-2mvXRV {
+    font-size: 0px;
+    transition-duration: 0.2s;
+    transform: translate(-20px);
+    transition-timing-function: ease-out;
+    transition-delay: 0.1s;
+}
+/* Small slide animation when switching channels*/
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.message-2qnXI6 {
+    animation: slide-up 0.4s ease;
+}
+/* Cozier reply messages */
+.compact-T3H92H {
+    --reply-message-margin: 10px;
+}
+.repliedMessage-VokQwo {
+    background-color: var(--background-secondary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 300ms background-color;
+    width: min-content;
+    max-width: 800px;
+}
+.repliedMessage-VokQwo:hover {
+    background-color: var(--background-modifier-hover);
+}
+.repliedMessage-VokQwo:active {
+    background-color: var(--background-modifier-active);
+}
+.repliedMessage-VokQwo::before {
+    margin-right: var(--reply-message-margin);
+}
+/* Resizable thread window by Hekky#6869 */
+:root {
+    --sidebar-width: 240px; /* change if your theme resizes the sidebar */
+}
+.chat-3bRxxu.threadSidebarOpen-vdkwIh {
+    resize: horizontal;
+    min-width: 400px;
+    max-width: calc(100vw - var(--sidebar-width) - 72px - 400px);
+}
+.chat-3bRxxu:not(.threadSidebarOpen-vdkwIh) {
+    width: unset !important;
+    flex: 1 1 auto;
+}
+.threadSidebar-1o3BTy {
+    width: unset;
+    flex: 1 1 auto;
+}
+/* Avatar zoom on hover */
+.avatar-37jOim:hover {
+    transform: scale(1.2);
+    border-radius: 5px !important;
+    transition: 250ms;
+}
+.avatar-37jOim {
+    transform: scale(1);
+    transition: 250ms;
+}
+.avatarHintInner-1TvA8u {
+    opacity: 0;
+}
+.avatar-37jOim:hover .avatarHint-2A3RNb > foreignObject {
+    mask: none !important;
+}
+.avatar-37jOim:hover .mask-1l8v16 > foreignObject {
+    mask: none !important;
+    border-radius: 5px;
+}
+/* Server Banner fades into sidebar */
+.animatedContainer-1NSq4T {
+    box-shadow: none !important;
+}
+.animatedContainer-1NSq4T:after {
+    background: linear-gradient(00deg, var(--background-secondary) 30%, transparent 100%);
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+}
+/* red slider instead of the grey one */
+.container-3auIfb[style*="opacity: 1; background-color: hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%);"] {
+    background-color: #c13a3a !important;
+    fill: #c13a3a !important;
+}
+.container-3auIfb[style*="opacity: 1; background-color: hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%);"]
+    path {
+    fill: #c13a3a !important;
+}
+.none-2Eo-qx {
+    scrollbar-width: auto !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    margin-right: 3px;
+}
+/* serverlist scrollbar */
+.none-2Eo-qx:hover::-webkit-scrollbar {
+    width: 0.25em !important;
+    border-radius: 25px;
+    height: 0px !important;
+    background: transparent !important;
+}
+.none-2Eo-qx::-webkit-scrollbar-thumb {
+    background: var(--background-tertiary);
+    border-radius: 25px;
+}
+/* autocomplete grid */
+.autocomplete-1vrmpx .scroller-lynW5A {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.autocomplete-1vrmpx .scroller-lynW5A > .base-1pYU8j {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.autocomplete-1vrmpx .scroller-lynW5A .autocompleteRowVertical-q1K4ky {
+    height: 39px;
+    margin: 0 8px;
+    padding: 0;
+    flex: 1 1 32%;
+}
+.autocomplete-1vrmpx .scroller-lynW5A .autocompleteRowVertical-q1K4ky:nth-last-child(2):not(:nth-child(n)) {
+    margin-right: 0;
+}
+/* closer to native windows titlebar */
+.titleBar-AC4pGV {
+    height: 32px !important;
+}
+.winButton-iRh8-Z {
+    height: 32px !important;
+    width: 42px !important;
+}
+.winButtonClose-1HsbF- {
+    color:#ed4245;
+  }
+/* Make the small lock badge yellow */
+[d="M22.545 4.87988V5.87988H23.28C23.4126 5.87988 23.52 5.98733 23.52 6.11988V10.6399C23.52 10.7724 23.4126 10.8799 23.28 10.8799H17.76C17.6275 10.8799 17.52 10.7724 17.52 10.6399V6.11988C17.52 5.98733 17.6275 5.87988 17.76 5.87988H18.52V4.87988C18.52 3.75988 19.47 2.87988 20.52 2.87988C21.57 2.87988 22.545 3.75988 22.545 4.87988ZM19.52 5.87988H21.52V4.87988C21.52 4.30845 21.0534 3.87988 20.52 3.87988C19.9867 3.87988 19.52 4.30845 19.52 4.87988V5.87988Z"] {
+    fill: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
+}
+/* small nsfw badge */
+[d="M19.8914 3.80204L22.2438 8.55654C22.5726 9.22119 22.0891 9.99999 21.3475 10L16.6179 10C15.8745 10 15.391 9.21769 15.7235 8.55279L18.1007 3.79829C18.4701 3.05951 19.5251 3.06172 19.8914 3.80204ZM18.4998 5H19.4999V7.5H18.4999L18.4998 5ZM18.4998 8.49887C18.4998 8.77589 18.7238 9 18.9998 9C19.2759 9 19.4999 8.77589 19.4999 8.49887C19.4999 8.22224 19.2759 7.99773 18.9998 7.99773C18.7238 7.99773 18.4998 8.22224 18.4998 8.49887Z"]{
+    fill:hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
+  }
+
+/* compact emoji settings */ 
+.marginBottom40-2vIwTv > .marginBottom4-2qk4Hy {
+  display: none;
+}
+.emojiRow-zIc7ZX {
+  display: inline-flex;
+  margin-right: 50px;
+}
+#app-mount .emojiUploader-1f0pVx {
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-11px);
+}
+#app-mount .emojiUploader-1f0pVx .avatar-2Hubm8 {
+  height: 32px !important; 
+}
+#app-mount .emojiRow-zIc7ZX:hover > .emojiUploader-1f0pVx {
+  opacity: 1;
+}
+#app-mount .emojiRow-zIc7ZX:hover > .emojiImage-1hZi2F {
+  opacity: 0;
 }
