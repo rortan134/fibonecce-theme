@@ -8,4 +8,4 @@ This discord theme includes:
 </ul>
 
 #### Import using:
-<Code>@import url("https://rortan134.github.io/Fibonecce-Theme/index.css" );</code>
+<Code>@import url("https://rortan134.github.io/Fibonecce-Theme/index.css");</code>
