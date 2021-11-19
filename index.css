@@ -16,7 +16,8 @@
 }
 
 body {
-background:url(https://cdn.discordapp.com/attachments/467688938681794560/881320734184591360/maxresdefault.png);
+background:url(https://cdn.discordapp.com/attachments/657560080023289887/883472757470400552/2334886.png);
+backdrop-filter:blur(2px);
 background-size:cover;
 background-position:center
 }
